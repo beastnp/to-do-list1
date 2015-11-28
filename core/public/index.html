@@ -21,7 +21,7 @@
         <br>
         {{ item.description }}
         <br>
-        {{ item.due }}
+        {{ item.due | date: 'medium' }}
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
