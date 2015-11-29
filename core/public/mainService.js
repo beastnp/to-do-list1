@@ -5,12 +5,6 @@ angular.module('toDoApp').service('mainService', function ($http) {
             return response.data;
         });
     };
-
-//    this.addNewItem = function (item) {
-//        return $http.post('/api/lists', item).then(function (response) {
-//            return response;
-//        });
-//    };
     
     this.addNewItem = function (item) {
         return $http.post('/api/lists', item).then(function (response) {
@@ -22,8 +16,8 @@ angular.module('toDoApp').service('mainService', function ($http) {
         var endpoint = '/api/lists/' + item._id;
         return $http.put(endpoint, item);
     };
-
-    this.updateItem = function (item) {
+    
+    this.deleteItem = function (item) {
         var endpoint = '/api/lists/' + item._id;
         return $http.delete(endpoint);
     };

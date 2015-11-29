@@ -15,13 +15,20 @@
         <input ng-model="newItem.due" type="date" placeholder="Due Date">
         <button ng-click="addNewItem()">Add Item</button>
     </form>
-    
+
     <div ng-repeat="item in items">
         {{ item.title }}
+        <br> {{ item.description }}
+        <br> {{ item.due | date: 'mediumDate' }} <button ng-click="deleteItem(item)">Delete Item</button>
         <br>
-        {{ item.description }}
-        <br>
-        {{ item.due | date: 'medium' }}
+        <form>
+            <input ng-model="item.title" type="text" placeholder="Title">
+            <br>
+            <input ng-model="item.description" type="text" placeholder="Description">
+            <br>
+            <input ng-model="item.due" type="date" placeholder="Due Date">
+            <button ng-click="updateItem(item)">Update</button>
+        </form>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
