@@ -1,0 +1,8 @@
+$primary-color: green;
+$secondary-color: blue;
+$alert-font-color: red;
+
+body {
+    background-color: $secondary-color;
+    color: $alert-font-color;
+}
